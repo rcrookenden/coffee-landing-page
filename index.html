@@ -6,6 +6,14 @@
   <title>Coffee Lover's Landing Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {},
+      },
+      plugins: [require('@tailwindcss/aspect-ratio')],
+    }
+  </script>
   <style>
     body {
       font-family: 'Baloo 2', cursive;
@@ -25,7 +33,9 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <!-- Item 1 -->
       <div class="bg-white p-6 rounded-xl shadow-md">
-        <img src="assets/shortbread.jpg" alt="My FAVE shortbread" class="mb-4 rounded object-cover h-60 w-full" />
+        <div class="aspect-w-1 aspect-h-1 mb-4">
+          <img src="assets/shortbread.jpg" alt="My FAVE shortbread" class="rounded object-cover w-full h-full" />
+        </div>
         <h3 class="text-xl font-semibold mb-2">My FAVE shortbread (super yummy!)</h3>
         <div class="flex justify-center mt-4">
           <a href="https://amzn.to/4jHPZ7o" target="_blank" class="text-white bg-yellow-500 px-6 py-3 text-base font-semibold rounded hover:bg-yellow-600">View on Amazon</a>
@@ -33,7 +43,9 @@
       </div>
       <!-- Item 2 -->
       <div class="bg-white p-6 rounded-xl shadow-md">
-        <img src="assets/coldbrew.jpg" alt="Cold-brew coffee maker!" class="mb-4 rounded object-cover h-60 w-full" />
+        <div class="aspect-w-1 aspect-h-1 mb-4">
+          <img src="assets/coldbrew.jpg" alt="Cold-brew coffee maker!" class="rounded object-cover w-full h-full" />
+        </div>
         <h3 class="text-xl font-semibold mb-2">Cold-brew coffee maker!</h3>
         <div class="flex justify-center mt-4">
           <a href="https://amzn.to/4lXNVcK" target="_blank" class="text-white bg-yellow-500 px-6 py-3 text-base font-semibold rounded hover:bg-yellow-600">View on Amazon</a>
@@ -41,7 +53,9 @@
       </div>
       <!-- Item 3 -->
       <div class="bg-white p-6 rounded-xl shadow-md">
-        <img src="assets/socks.jpg" alt="Hilarious socks 🧦" class="mb-4 rounded object-cover h-60 w-full" />
+        <div class="aspect-w-1 aspect-h-1 mb-4">
+          <img src="assets/socks.jpg" alt="Hilarious socks 🧦" class="rounded object-cover w-full h-full" />
+        </div>
         <h3 class="text-xl font-semibold mb-2">Hilarious socks 🧦</h3>
         <div class="flex justify-center mt-4">
           <a href="https://amzn.to/3Gz3qrF" target="_blank" class="text-white bg-yellow-500 px-6 py-3 text-base font-semibold rounded hover:bg-yellow-600">View on Amazon</a>
@@ -78,3 +92,4 @@
   </footer>
 </body>
 </html>
+
